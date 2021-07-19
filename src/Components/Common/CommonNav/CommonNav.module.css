@@ -1,0 +1,26 @@
+.main__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.right_style > ul {
+  display: flex;
+  color: rgba(0, 0, 0, 0.534);
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.right_style > ul > li {
+  list-style-type: none;
+  padding: 0px 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.nav__active {
+  color: #5f63f2;
+
+  border-bottom: 2px solid #5f63f2;
+}
