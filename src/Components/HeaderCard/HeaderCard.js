@@ -3,6 +3,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import HeaderChart from "./HeaderChart/HeaderChart";
 
 const data = [
   { price: 1000, title: "Orders", percentage: "25% ", in: "up" },
@@ -43,6 +44,7 @@ const HeaderCard = () => {
                       since last weak
                     </span>
                   </div>
+                  <HeaderChart />
                 </Paper>
               </Col>
             );
