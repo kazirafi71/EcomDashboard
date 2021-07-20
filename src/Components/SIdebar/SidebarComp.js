@@ -22,6 +22,15 @@ import { Row, Col, Container } from "react-bootstrap";
 import HeaderCard from "../HeaderCard/HeaderCard";
 import MiddleRow from "../Middle/MiddleRow";
 import LastRow from "../LastRow/LastRow";
+import Footer from "./../Footer/Footer";
+import { Avatar } from "@material-ui/core";
+import SettingsIcon from "@material-ui/icons/Settings";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import EmailIcon from "@material-ui/icons/Email";
+import VerticalAlignBottomIcon from "@material-ui/icons/VerticalAlignBottom";
+import ShareIcon from "@material-ui/icons/Share";
+import Styles from "./SidebarComp.module.css";
+import AddIcon from '@material-ui/icons/Add';
 
 const drawerWidth = 240;
 
@@ -83,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(0),
   },
 }));
 
@@ -110,21 +119,38 @@ export default function SidebarComp() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, {
-              [classes.hide]: open,
-            })}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            Dashboard
-          </Typography>
+        <Toolbar className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              className={clsx(classes.menuButton, {
+                [classes.hide]: open,
+              })}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap>
+              Dashboard
+            </Typography>
+          </div>
+          <div className="d-flex align-items-center">
+            <IconButton>
+              <EmailIcon />
+            </IconButton>
+            <IconButton>
+              <NotificationsIcon />
+            </IconButton>
+            <IconButton>
+              <SettingsIcon />
+            </IconButton>
+            <Avatar
+              style={{ height: "35px", width: "35px" }}
+              src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d29tYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            />
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -175,10 +201,28 @@ export default function SidebarComp() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Container fluid>
+          <div className="d-flex align-items-center justify-content-between p-3">
+            <p>ECommerce Dashboard</p>
+            <div className="">
+              <button className={Styles.btn__style}>
+                <VerticalAlignBottomIcon />
+                Export
+              </button>
+              <button className={Styles.btn__style}>
+                <ShareIcon />
+                Share
+              </button>
+              <button className={Styles.btn__style_2}>
+                <AddIcon />
+                Add New
+              </button>
+            </div>
+          </div>
           <HeaderCard />
           <MiddleRow />
           <LastRow />
         </Container>
+        <Footer />
       </main>
     </div>
   );

@@ -8,6 +8,9 @@ const tableData = [
   { title: "Samsung Galaxy S8", price: 1234, sold: 123, revenue: 123 },
   { title: "Samsung Galaxy S8", price: 1234, sold: 123, revenue: 123 },
   { title: "Samsung Galaxy S8", price: 1234, sold: 123, revenue: 123 },
+  { title: "Samsung Galaxy S8", price: 1234, sold: 123, revenue: 123 },
+  { title: "Samsung Galaxy S8", price: 1234, sold: 123, revenue: 123 },
+  
 ];
 
 const TopSellingTable = () => {

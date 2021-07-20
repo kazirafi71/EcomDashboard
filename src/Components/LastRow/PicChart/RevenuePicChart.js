@@ -1,11 +1,11 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
-      label: "Last Week",
+      label: "# of Votes",
       data: [12, 19, 3, 5, 2, 3],
       backgroundColor: [
         "rgba(255, 99, 132, 0.2)",
@@ -23,27 +23,15 @@ const data = {
         "rgba(153, 102, 255, 1)",
         "rgba(255, 159, 64, 1)",
       ],
-      borderWidth: 0.4,
+      borderWidth: 1,
     },
   ],
 };
 
-const options = {
-  scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true,
-        },
-      },
-    ],
-  },
-};
-
-const HeaderChart = () => (
+const RevenuePicChart = () => (
   <>
-    <Bar data={data} options={options} />
+    <Pie data={data} />
   </>
 );
 
-export default HeaderChart;
+export default RevenuePicChart;

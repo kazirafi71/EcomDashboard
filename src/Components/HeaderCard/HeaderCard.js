@@ -23,7 +23,7 @@ const HeaderCard = () => {
                 <Paper className="p-3">
                   <h3>{val.price}</h3>
                   <p>{val.title}</p>
-                  <div className="d-flex ">
+                  <div className="d-flex flex-wrap">
                     {val.in === "up" && (
                       <p className="mr-2" style={{ color: "green" }}>
                         <ArrowUpwardIcon />
