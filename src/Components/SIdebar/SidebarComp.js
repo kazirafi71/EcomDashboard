@@ -30,7 +30,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import VerticalAlignBottomIcon from "@material-ui/icons/VerticalAlignBottom";
 import ShareIcon from "@material-ui/icons/Share";
 import Styles from "./SidebarComp.module.css";
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from "@material-ui/icons/Add";
 
 const drawerWidth = 240;
 
@@ -201,7 +201,7 @@ export default function SidebarComp() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between p-3">
+          <div className="d-flex align-items-center justify-content-between p-3 flex-wrap">
             <p>ECommerce Dashboard</p>
             <div className="">
               <button className={Styles.btn__style}>

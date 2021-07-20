@@ -1,0 +1,9 @@
+.column__width {
+  height: 360px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .column__width {
+    height: 100% !important;
+  }
+}

@@ -7,6 +7,7 @@ import LocationTable from "./LocationTable/LocationTable";
 import RevenuePicChart from "./PicChart/RevenuePicChart";
 import TopSellingTable from "./TopSellingTable/TopSellingTable";
 import AOS from "aos";
+import Styles from './LastRow.module.css'
 
 const LastRow = () => {
   useEffect(() => {
@@ -22,20 +23,20 @@ const LastRow = () => {
       <Container>
         <Row>
           <Col data-aos="fade-up-right" className="py-2" md={4}>
-            <Paper style={{ height: "510px", overflow: "hidden" }}>
+            <Paper className={Styles.column__width}>
               <CommonNav heading="Top Selling Products" />
               <TopSellingTable />
             </Paper>
           </Col>
           <Col data-aos="fade-up-right" className="py-2" md={4}>
-            <Paper style={{ height: "510px", overflow: "hidden" }}>
+            <Paper className={Styles.column__width}>
               <CommonNav heading="Sales By Location" />
               <LocationMap />
               <LocationTable />
             </Paper>
           </Col>
           <Col data-aos="fade-up-right" className="py-2" md={4}>
-            <Paper style={{ height: "510px", overflow: "hidden" }}>
+            <Paper className={Styles.column__width}>
               <CommonNav heading="Revenue By Device" />
               <RevenuePicChart />
             </Paper>
